@@ -157,7 +157,9 @@ if __name__ == "__main__":
 
                         # If score change...
                         if new_score != old_score:
+                            ret = client1.publish("canes_data/new_score", "True") 
                             old_score = new_score
+                        
 
                         ret = client1.publish("canes_data/is_game", "True") 
                         ret = client1.publish("canes_data/current_period", current_period)
