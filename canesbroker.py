@@ -15,7 +15,7 @@ user = "admin"
 password = "<password>"
 
 #main_dir = os.getcwd()
-main_dir = "/home/ubuntu/canesbroker"
+main_dir = "/home/pi/canesbroker"
 
 # do something on exit
 def clearOnExit():
@@ -83,7 +83,7 @@ def setup_nhl():
     except IndexError:
         team_id = ""
     if team_id == "":
-        team = "Hurricanes"
+        team = "Avalanche"
 
         # query the api to get the ID
         team_id = nhl.get_team_id(team)
